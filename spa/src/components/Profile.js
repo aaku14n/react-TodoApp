@@ -1,23 +1,23 @@
 import React from "react";
 import userData from "../store/Store.js";
-
+import "../Pages/css/Home.css";
 import Header from "../Pages/Header";
+import ProfilePage from "../Pages/Profile";
 import Footer from "../Pages/Footer";
-import UserInfo from "../Pages/User";
 
-export default class Information extends React.Component {
+export default class Profile extends React.Component {
   constructor() {
     super();
     this.state = {
       user: userData.getAll()
     };
   }
+
   render() {
     return (
       <div>
         <Header />
-        {/* <UserInfo userData={this.state.user} /> */}
-        {/* <Posts />  */}
+        <ProfilePage userData={this.state.user.profile} />
         <Footer />
       </div>
     );

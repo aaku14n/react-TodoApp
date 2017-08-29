@@ -27,12 +27,17 @@ select {
   width: -webkit-fill-available;
 }
 .Body-User-Info {
-  background-color: seashell;
+  background-color: #bfbfbf;
   width: 35%;
   padding: 25px;
   margin-top: 30px;
   margin-left: 50px;
   margin-bottom: 30px;
+  border-radius: 7px;
+  transition: background-color 0.5s;
+}
+.Body-User-Info:hover {
+  background-color: #909090;
 }
 .Body-User-Info-Item {
   background-color: white;
@@ -41,8 +46,9 @@ select {
 }
 .Body-User-label {
   color: teal;
-  font-family: cursive;
+  font-family: monospace;
   font-size: x-large;
+  text-transform: capitalize;
 }
 
 .Body-User-value {
@@ -57,7 +63,7 @@ select {
   margin-left: 20px;
   width: 50%;
   padding: 20px;
-  height: 347px;
+  height: 500px;
   overflow-y: scroll;
 }
 .Home-header-nav {
@@ -114,4 +120,31 @@ select {
   height: 70px;
   border: solid 2px #f7f2cb;
   border-radius: 5px;
+}
+.Body-Profile {
+  background-color: #0b5a9c;
+  margin: 30px;
+  padding: 17px;
+  height: 200px;
+  border-radius: 5px;
+}
+.Profile-photo {
+  background-color: #aec8f4;
+  width: 200px;
+  height: 200px;
+  margin-top: -140px;
+  border-radius: 100px;
+  margin-left: 40%;
+  border: solid 3px white;
+  text-align: center;
+  font-size: 150px;
+  color: #24374b;
+}
+.Body-Profile-Panel {
+  background-color: #89daf3;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+  text-align: center;
+  padding-top: 20px;
 }
