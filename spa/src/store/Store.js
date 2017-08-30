@@ -35,6 +35,15 @@ class UserData extends EventEmitter {
     this.emit("change");
   }
 
+  userEdit(data) {
+    let oldData = this.user.profile;
+    if (data.name !== "") oldData[0].name = data.name;
+    if (data.profile !== "") oldData[1].profile = data.profile;
+    if (data.status !== "") oldData[2].status = data.status;
+    if (data.address !== "") oldData[3].address = data.address;
+    this.emit("change");
+    alert("Success");
+  }
   getAll() {
     return this.user;
   }

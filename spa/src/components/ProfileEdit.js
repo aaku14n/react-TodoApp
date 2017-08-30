@@ -6,8 +6,8 @@ import ProfileEditPage from "../Pages/ProfileEdit";
 import Footer from "../Pages/Footer";
 
 export default class ProfileEdit extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       user: userData.getAll()
     };
@@ -17,7 +17,10 @@ export default class ProfileEdit extends React.Component {
     return (
       <div>
         <Header />
-        <ProfileEditPage userData={this.state.user.profile} />
+        <ProfileEditPage
+          userEdit={data => userData.userEdit(data)}
+          userData={this.state.user.profile}
+        />
         <Footer />
       </div>
     );

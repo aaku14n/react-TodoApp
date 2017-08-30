@@ -2,10 +2,12 @@ import React from "react";
 import "./css/Home.css";
 
 export default class ProfileEditPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.userData = this.props.userData;
-  }
+  // constructor(props) {
+  //   super(props);
+  //   console.log(this.props.userEdit);
+  //   this.userData = this.props.userData;
+  //   this.userEdit = this.props.userEdit;
+  // }
   userInfo(data) {
     return (
       <div className="Body-User-Info-Item" key={Object.keys(data)}>
@@ -13,17 +15,28 @@ export default class ProfileEditPage extends React.Component {
           {Object.keys(data)}
         </div>
         <div className="Body-User-value">
-          {Object.values(data)}
+          <input
+            type="text"
+            id={Object.keys(data)}
+            placeholder={Object.values(data)}
+          />
         </div>
       </div>
     );
   }
+  userPostEdit() {
+    let userData = {};
+    userData.name = document.getElementById("name").value;
+    userData.profile = document.getElementById("profile").value;
+    userData.status = document.getElementById("status").value;
+    userData.address = document.getElementById("address").value;
+    this.props.userEdit(userData);
+  }
   render() {
-    console.log(this.userData);
-
     return (
       <div className="Body-User-Info">
-        {this.userData.map(data => this.userInfo(data))}
+        {this.props.userData.map(data => this.userInfo(data))}
+        <button onClick={() => this.userPostEdit()}>Save</button>
       </div>
     );
   }
