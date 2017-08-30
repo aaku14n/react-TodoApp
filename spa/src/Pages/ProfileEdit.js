@@ -2,12 +2,6 @@ import React from "react";
 import "./css/Home.css";
 
 export default class ProfileEditPage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   console.log(this.props.userEdit);
-  //   this.userData = this.props.userData;
-  //   this.userEdit = this.props.userEdit;
-  // }
   userInfo(data) {
     return (
       <div className="Body-User-Info-Item" key={Object.keys(data)}>
