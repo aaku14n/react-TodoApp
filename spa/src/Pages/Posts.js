@@ -12,8 +12,8 @@ export default class userPosts extends React.Component {
 
   userPost(post) {
     return (
-      <Link to={"profile/" + post.id} className="Home-Link">
-        <div className="Body-User-Post-Card" key={post.id}>
+      <Link to={"profile/" + post.id} className="Home-Link" key={post.id}>
+        <div className="Body-User-Post-Card">
           <div className="Body-User-Post-Label">
             {post.name}
           </div>

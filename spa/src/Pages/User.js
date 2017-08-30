@@ -18,8 +18,6 @@ export default class UserInfo extends React.Component {
     );
   }
   render() {
-    console.log(this.userData);
-
     return (
       <div className="Body-User-Info">
         {this.userData.profile.map(data => this.userInfo(data))}
