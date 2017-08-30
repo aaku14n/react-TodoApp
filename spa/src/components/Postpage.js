@@ -1,5 +1,5 @@
 import React from "react";
-import userData from "../store/Store.js";
+// import userData from "../store/Store.js";
 import "../Pages/css/Home.css";
 import Header from "../Pages/Header";
 import PostPage from "../Pages/PostPage";

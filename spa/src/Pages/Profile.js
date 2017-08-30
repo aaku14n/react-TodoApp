@@ -16,7 +16,7 @@ export default class ProfilePage extends React.Component {
   }
   render() {
     const user = this.props.userData;
-    console.log(user);
+
     return (
       <div>
         <div className="Body-Profile" />
