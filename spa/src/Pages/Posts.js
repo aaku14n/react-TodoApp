@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./css/Home.css";
 import AddPost from "../components/AddPost";
 export default class userPosts extends React.Component {
@@ -11,14 +12,16 @@ export default class userPosts extends React.Component {
 
   userPost(post) {
     return (
-      <div className="Body-User-Post-Card" key={post.id}>
-        <div className="Body-User-Post-Label">
-          {post.name}
+      <Link to={"profile/" + post.id} className="Home-Link">
+        <div className="Body-User-Post-Card" key={post.id}>
+          <div className="Body-User-Post-Label">
+            {post.name}
+          </div>
+          <div className="Body-User-Post-Value">
+            {post.post}
+          </div>
         </div>
-        <div className="Body-User-Post-Value">
-          {post.post}
-        </div>
-      </div>
+      </Link>
     );
   }
   render() {

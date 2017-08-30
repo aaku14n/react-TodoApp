@@ -24,7 +24,7 @@ select {
 .Body {
   background-color: white;
   display: inline-flex;
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
 }
 .Body-User-Info {
   background-color: #bfbfbf;
@@ -116,7 +116,7 @@ select {
   background-color: #f7f2cb;
   padding: 5px;
   color: seagreen;
-  width: -webkit-fill-available;
+  width: 100%;
   height: 70px;
   border: solid 2px #f7f2cb;
   border-radius: 5px;

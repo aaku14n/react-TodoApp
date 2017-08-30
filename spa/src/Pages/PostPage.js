@@ -1,30 +1,38 @@
 import React from "react";
 import "./css/Home.css";
+import userData from "../store/Store.js";
 
-export default class ProfilePage extends React.Component {
+export default class PostPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.user = userData.getAll();
+    this.postId = this.props.userPost.userId;
+  }
   userData(data) {
     return (
       <div key={Object.keys(data)}>
         <div className="Body-User-label">
-          {Object.keys(data)}{" "}
+          {data.name}
         </div>
         <div className="Body-User-value">
-          {Object.values(data)}
+          {data.post}
         </div>
       </div>
     );
   }
   render() {
-    const user = this.props.userData;
-    console.log(user);
     return (
       <div>
         <div className="Body-Profile" />
         <div className="Profile-photo">
-          {user[0].name[0]}
+          {this.user.post.map(
+            data => (this.postId == data.id ? data.name[0] : "")
+          )}
         </div>
         <div className="Body-Profile-Panel">
-          {user.map(data => this.userData(data))}
+          {this.user.post.map(
+            data => (this.postId == data.id ? this.userData(data) : "")
+          )}
         </div>
         <br />
         <br />

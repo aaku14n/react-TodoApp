@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/Home.css";
-export default class UserInfo extends React.Component {
+
+export default class ProfileEditPage extends React.Component {
   constructor(props) {
     super(props);
     this.userData = this.props.userData;
@@ -22,7 +23,7 @@ export default class UserInfo extends React.Component {
 
     return (
       <div className="Body-User-Info">
-        {this.userData.profile.map(data => this.userInfo(data))}
+        {this.userData.map(data => this.userInfo(data))}
       </div>
     );
   }
