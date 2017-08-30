@@ -18,6 +18,7 @@ export default class ProfileEditPage extends React.Component {
           <input
             type="text"
             id={Object.keys(data)}
+            className="User-Edit-Input"
             placeholder={Object.values(data)}
           />
         </div>
