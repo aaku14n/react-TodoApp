@@ -1,6 +1,6 @@
 import React from "react";
 import userData from "../store/Store.js";
-import "../Pages/css/Home.css";
+import "../Pages/css/bootstrap.min.css";
 import Header from "../Pages/Header";
 import Footer from "../Pages/Footer";
 import UserInfo from "../Pages/User";
@@ -24,12 +24,15 @@ export default class Home extends React.Component {
     return (
       <div>
         <Header />
-        <div className="Body">
-          <UserInfo userData={this.state.user} />
-          <UserPosts
-            userPosts={this.state.user.post}
-            addPost={post => userData.addPost(post)}
-          />
+        <br />
+        <div className="container">
+          <div className="justify-content-between row">
+            <UserInfo userData={this.state.user} />
+            <UserPosts
+              userPosts={this.state.user.post}
+              addPost={post => userData.addPost(post)}
+            />
+          </div>
         </div>
         <Footer />
       </div>

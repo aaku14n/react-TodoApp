@@ -20,6 +20,7 @@ export default class PostPage extends React.Component {
       </div>
     );
   }
+
   render() {
     return (
       <div>

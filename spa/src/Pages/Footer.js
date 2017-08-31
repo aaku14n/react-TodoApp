@@ -1,8 +1,7 @@
 import React from "react";
-import "./css/Home.css";
-
+import "./css/bootstrap.min.css";
 export default class Footer extends React.Component {
   render() {
-    return <div className="Home-footer">Thanx</div>;
+    return <div className="card-footer text-muted">Thanx</div>;
   }
 }

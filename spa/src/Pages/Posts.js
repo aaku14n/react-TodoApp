@@ -26,11 +26,20 @@ export default class userPosts extends React.Component {
   }
   render() {
     return (
-      <div className="Body-User-Post">
-        <div>
-          <AddPost addPost={post => this.props.addPost(post)} />
+      <div className="col-lg-8">
+        <div className="card">
+          <div className="card-body">
+            <h4 className="card-title">Add Post</h4>
+            <AddPost addPost={post => this.props.addPost(post)} />
+          </div>
         </div>
-        {this.props.userPosts.map(post => this.userPost(post))}
+        <br />
+        <div className="card">
+          <div className="card-body">
+            <h4 className="card-title">Post</h4>
+            {this.props.userPosts.map(post => this.userPost(post))}
+          </div>
+        </div>
       </div>
     );
   }

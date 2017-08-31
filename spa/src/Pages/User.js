@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/Home.css";
+import "../Pages/css/bootstrap.min.css";
 export default class UserInfo extends React.Component {
   constructor(props) {
     super(props);
@@ -7,7 +8,7 @@ export default class UserInfo extends React.Component {
   }
   userInfo(data) {
     return (
-      <div className="Body-User-Info-Item" key={Object.keys(data)}>
+      <div className="list-group-item" key={Object.keys(data)}>
         <div className="Body-User-label">
           {Object.keys(data)}
         </div>
@@ -19,8 +20,13 @@ export default class UserInfo extends React.Component {
   }
   render() {
     return (
-      <div className="Body-User-Info">
-        {this.userData.profile.map(data => this.userInfo(data))}
+      <div className="col">
+        <div className="fixed">
+          <div className="card-header">User Info</div>
+          <div className="card-body">
+            {this.userData.profile.map(data => this.userInfo(data))}
+          </div>
+        </div>
       </div>
     );
   }
