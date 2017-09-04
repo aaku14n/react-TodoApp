@@ -11,15 +11,17 @@ export default class userPosts extends React.Component {
   }
 
   userPost(post) {
+    let style_data = { "text-decoration": "none" };
     return (
-      <Link to={"profile/" + post.id} className="Home-Link" key={post.id}>
+      <Link
+        to={"profile/" + post.id}
+        className="Home-Link"
+        style={style_data}
+        key={post.id}
+      >
         <div className="Body-User-Post-Card">
-          <div className="Body-User-Post-Label">
-            {post.name}
-          </div>
-          <div className="Body-User-Post-Value">
-            {post.post}
-          </div>
+          <div className="Body-User-Post-Label">{post.name}</div>
+          <div className="Body-User-Post-Value">{post.post}</div>
         </div>
       </Link>
     );
