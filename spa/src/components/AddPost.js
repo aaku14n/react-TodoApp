@@ -25,6 +25,7 @@ export default class AddPost extends React.Component {
           <div id="box" />
           <br />
           <br />
+          <br />
           <b>Waiting...</b>
         </div>
         <input type="text" className="Body-User-Post-Name" placeholder="Name" />
